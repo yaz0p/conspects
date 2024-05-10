@@ -77,29 +77,3 @@ def foobar():
 # return render_template('foo.html', title='foobarbaz')
 #
 # Теперь значение title из Flask будет передаваться в шаблон
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
