@@ -52,3 +52,13 @@ except ZeroDivisionError as err:
     logging.error("ZeroDivisionError",exc_info=True)
 
 
+# Для получения диагностической информации в продакшене используют sentry-sdk
+# Для инициализации sentry используется следующий код:
+
+sentry_sdk.init(
+     dsn="<your-dsn-key-here>",
+     traces_sample_rate=0.85,
+)
+
+# dsn получают при создании проекта внутри sentry. 
+
