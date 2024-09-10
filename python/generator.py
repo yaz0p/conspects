@@ -1,7 +1,7 @@
 # Функция-генератор позволяет объявить функцию, ведущую себя, как `итератор`
-# 
+from typing import Iterator, Self
 
-def generator():
+def generator() -> Iterator[int]:
     print("Сейчас отдам число")
     yield 1
     print("Сейчас отдам ещё число")
@@ -50,14 +50,17 @@ print(next(gen_o))
 
 
 class MyIterable:
-    def __init__(this):
+    '''
+    Custom generator class for implementation
+    '''
+    def __init__(this) -> None:
         this.value = 0  # правило создания экземпляра класса
 
-    def __iter__(this):
+    def __iter__(this) -> Self:
         print("Был получен итератор")
         return this  # возвращение числа при вызове итератора
 
-    def __next__(this):
+    def __next__(this) -> int:
         this.value += 1  # возвращение значения при вызове метода next
         print("Current value", this.value)
         if this.value < 5:
