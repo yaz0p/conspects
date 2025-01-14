@@ -43,7 +43,7 @@ class Container(Generic[T]):
     def get_item(self) -> T:
         return self.item
 
-int_container = Container(10)
+int_container = Container[int](10) # Можно передавать тип явно и неявно
 print(int_container.get_item())  # Вывод: 10
 
 str_container = Container("Hello")
